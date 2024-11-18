@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { motion } from 'motion/react';
 const Contact = () => {
     const [result, setResult] = React.useState("");
     
@@ -29,7 +29,14 @@ const Contact = () => {
     };
     
   return (
-    <div className='w-full p-6 py-20 overflow-hidden text-center lg:px-32' id='Contact'>
+    <motion.div 
+    initial={{ opacity: 0, x:-200 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1 }} 
+    whileInView={{ opacity: 1, x:0 }}
+    viewport={{once: true}}
+
+    className='w-full p-6 py-20 overflow-hidden text-center lg:px-32' id='Contact'>
        <h1 className="mb-2 text-2xl font-bold text-center sm:text-4xl">Contact <span className="font-light underline underline-offset-4 decoration-1 ">With Us</span></h1>
        <p className="mx-auto mb-12 text-center text-gray-500 max-w-80">Ready to Make a Move? Let's Build your Future Together</p>
        <form className="max-w-2xl pt-8 mx-auto text-gray-600" onSubmit={onSubmit}>
@@ -49,7 +56,7 @@ const Contact = () => {
         </div>
         <button className="px-12 py-2 text-white bg-blue-600 rounded hover:bg-blue-900">{result ? result : 'Send Message'}</button>
        </form>
-    </div>
+    </motion.div>
   )
 }
 

@@ -10,7 +10,7 @@ const Footer = () => {
         <div className='container flex flex-col items-start justify-between mx-auto md:flex-row' >
             <div className='w-full mb-8 md:w-1/3 md:mb-0'>
                 <img src={assets.bright} alt="logo" className='rounded size-16'/>
-                <p className='mt-4 text-gray-400'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati temporibus quos praesentium, maxime doloribus porro, a magni aperiam, vel tenetur quis explicabo? Ad, alias quidem expedita eveniet ipsum ipsam non?</p>
+                <p className='mt-4 text-gray-400'>Experience exceptional living with Bright-Well Properties, your premier real estate partner. We craft vibrant communities, delivering luxurious spaces that elevate your lifestyle. With expertise and passion, we bring your vision to life, creating havens that inspire relaxation, connection, and growth. Explore our exclusive offerings, where comfort meets sophistication.</p>
             </div>
             <div className='w-full mb-8 md:w-1/5 md:mb-0'>
                 <h3 className='mb-4 text-lg font-bold text-white'>Bright-Well Properties</h3>

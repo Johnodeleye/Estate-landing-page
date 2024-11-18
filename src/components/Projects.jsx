@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { assets, projectsData } from '../assets/assets'
-
+import { motion } from 'motion/react';
 const Projects = () => {
     
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,7 +28,13 @@ const Projects = () => {
     }
     
   return (
-    <div className='container w-full px-6 py-4 pt-20 mx-auto my-20 overflow-hidden md:px-20 lg:px-32' id='Projects'>
+    <motion.div 
+    initial={{ opacity: 0, x:-200 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1 }} 
+    whileInView={{ opacity: 1, x:0 }}
+    viewport={{once: true}}
+    className='container w-full px-6 py-4 pt-20 mx-auto my-20 overflow-hidden md:px-20 lg:px-32' id='Projects'>
       <h1 className="mb-2 text-2xl font-bold text-center sm:text-4xl">Projects <span className='font-light underline underline-offset-4 decoration-1 under'>Completed</span>
       </h1>
       <p className="mx-auto mb-8 text-center text-gray-500 max-w-80">Crafting Spaces, Building Legacies-Explore Our Portfolio</p>
@@ -62,7 +68,7 @@ const Projects = () => {
         </div>
       </div>
       
-    </div>
+    </motion.div>
   )
 }
 
