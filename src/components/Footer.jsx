@@ -22,8 +22,9 @@ const Footer = () => {
             setResult('Form Submitted Successfully');
             Swal.fire({
                 title: "Success!",
-                text: "Your message has been recieved",
-                icon: "success"
+                text: "You subscribed to the newsletter",
+                icon: "success",
+                footer: 'You will now start receiving from us weekly!',
               });
             event.target.reset();
         } else {
