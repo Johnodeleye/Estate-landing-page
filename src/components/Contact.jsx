@@ -8,7 +8,7 @@ const Contact = () => {
         setResult('Sending....');
         const formData = new FormData(event.target);
         
-        formData.append('access_key', '123456789');
+        formData.append('access_key', '8d4a9798-6b50-4e7e-b2d6-55108dd78b15');
         
         const response = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -19,7 +19,11 @@ const Contact = () => {
         
         if (data.success) {
             setResult('Form Submitted Successfully');
-            alert('Form Submitted Successfully');
+            Swal.fire({
+                title: "Success!",
+                text: "Your message has been recieved",
+                icon: "success"
+              });
             event.target.reset();
         } else {
             alert('Something went wrong', data.message);
