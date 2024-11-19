@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import Swal from 'sweetalert2';
 
 const Footer = () => {
     const [result, setResult] = React.useState("");

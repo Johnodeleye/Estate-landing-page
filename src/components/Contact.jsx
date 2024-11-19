@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'motion/react';
+import Swal from 'sweetalert2';
 const Contact = () => {
     const [result, setResult] = React.useState("");
     
